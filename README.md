@@ -1,4 +1,4 @@
-![1st-ui](https://github.com/Ashupaldeora/core_flutter/assets/143180848/83ce3dce-9cfb-4ad6-8c07-1c8425b5d8bc)# core_flutter
+# core_flutter
 
 A new Flutter project.
 
