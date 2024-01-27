@@ -3,7 +3,7 @@ import 'package:flutter/services.dart';
 
 void main() {
   SystemChrome.setSystemUIOverlayStyle(const SystemUiOverlayStyle(
-    statusBarColor: Color(0xff327435),
+    statusBarColor: Color(0xff004F48),
   ));
   runApp(const MyApp());
 }
@@ -18,43 +18,47 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       home: SafeArea(
         child: Scaffold(
-          backgroundColor: Colors.black,
+          backgroundColor: Colors.white,
           appBar: AppBar(
-            backgroundColor: const Color(0xff4CAF50),
+            backgroundColor: const Color(0xff009688),
             title: const Text(
-              "Launch Button",
+              "Dark Shadow Button",
               style:
-                  TextStyle(color: Colors.white, fontWeight: FontWeight.w500),
+              TextStyle(color: Colors.white, fontWeight: FontWeight.w500),
             ),
             centerTitle: true,
           ),
           body: Center(
             child: Container(
-              height: 200,
-              width: 200,
+              height: 80,
+              width: 250,
               alignment: Alignment.center,
-              decoration: BoxDecoration(
-                  color: Colors.black,
-                  shape: BoxShape.circle,
-                  border: Border.all(width: 1.2, color: Colors.white),
-                  boxShadow: const [
+              decoration: const BoxDecoration(
+                  color: Colors.white,
+                  shape: BoxShape.rectangle,
+                  borderRadius: BorderRadius.all(Radius.circular(20)),
+                  // border: Border.all(width: 1.2, color: Colors.red),
+                  boxShadow: [
                     BoxShadow(
-                      color: Color(0xff0D750A),
+                      color: Color(0xff009688),
                       blurStyle: BlurStyle.normal,
-                      blurRadius: 10,
+                      blurRadius: 5,
                       spreadRadius: 3,
                     ),
                     BoxShadow(
-                      color: Colors.green,
+                      color: Color(0xff009688),
                       blurStyle: BlurStyle.normal,
-                      blurRadius: 30,
+                      blurRadius: 15,
                       spreadRadius: 5,
+                      offset: Offset(0, 5)
                     ),
-
                   ]),
               child: const Text(
-                "Go",
-                style: TextStyle(color: Colors.white, fontSize: 30),
+                "Tap",
+                style: TextStyle(
+                    color: Colors.black,
+                    fontSize: 25,
+                    fontWeight: FontWeight.w300),
               ),
             ),
           ),

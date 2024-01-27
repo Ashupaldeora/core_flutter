@@ -3,7 +3,7 @@ import 'package:flutter/services.dart';
 
 void main() {
   SystemChrome.setSystemUIOverlayStyle(const SystemUiOverlayStyle(
-    statusBarColor: Color(0xff327435),
+    statusBarColor: Color(0xffBF3D3D),
   ));
   runApp(const MyApp());
 }
@@ -20,9 +20,9 @@ class MyApp extends StatelessWidget {
         child: Scaffold(
           backgroundColor: Colors.black,
           appBar: AppBar(
-            backgroundColor: const Color(0xff4CAF50),
+            backgroundColor: const Color(0xffFF5252),
             title: const Text(
-              "Launch Button",
+              "Dark Shadow Button",
               style:
                   TextStyle(color: Colors.white, fontWeight: FontWeight.w500),
             ),
@@ -30,31 +30,34 @@ class MyApp extends StatelessWidget {
           ),
           body: Center(
             child: Container(
-              height: 200,
-              width: 200,
+              height: 80,
+              width: 250,
               alignment: Alignment.center,
               decoration: BoxDecoration(
                   color: Colors.black,
-                  shape: BoxShape.circle,
-                  border: Border.all(width: 1.2, color: Colors.white),
+                  shape: BoxShape.rectangle,
+                  borderRadius: BorderRadius.all(Radius.circular(20)),
+                  border: Border.all(width: 1.2, color: Colors.red),
                   boxShadow: const [
                     BoxShadow(
-                      color: Color(0xff0D750A),
+                      color: Color(0xff822A2A),
                       blurStyle: BlurStyle.normal,
-                      blurRadius: 10,
+                      blurRadius: 20,
                       spreadRadius: 3,
                     ),
                     BoxShadow(
-                      color: Colors.green,
+                      color: Color(0xff822A2A),
                       blurStyle: BlurStyle.normal,
-                      blurRadius: 30,
+                      blurRadius: 20,
                       spreadRadius: 5,
                     ),
-
                   ]),
               child: const Text(
-                "Go",
-                style: TextStyle(color: Colors.white, fontSize: 30),
+                "Tap",
+                style: TextStyle(
+                    color: Colors.white,
+                    fontSize: 25,
+                    fontWeight: FontWeight.w300),
               ),
             ),
           ),
