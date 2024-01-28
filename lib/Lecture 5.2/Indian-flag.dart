@@ -3,7 +3,7 @@ import 'package:flutter/services.dart';
 
 void main() {
   SystemChrome.setSystemUIOverlayStyle(const SystemUiOverlayStyle(
-    statusBarColor: Color(0xff312D48),
+    statusBarColor: Color(0xff1970B6),
   ));
   runApp(const MyApp());
 }
@@ -18,42 +18,63 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       home: SafeArea(
         child: Scaffold(
-          backgroundColor: const Color(0xff48416A),
+
           appBar: AppBar(
-            backgroundColor: const Color(0xff48416A),
+            backgroundColor: const Color(0xff2193EE),
             elevation: 10,
             shadowColor: Colors.black,
             title: const Text(
-              "Gradient Button",
+              "An Indian Flag",
               style:
               TextStyle(color: Colors.white, fontWeight: FontWeight.w500),
             ),
             centerTitle: true,
           ),
-          body: Center(
-            child: Container(
-              height: 80,
-              width: 250,
-              alignment: Alignment.center,
-              decoration:  BoxDecoration(
-                color: Colors.white,
-                shape: BoxShape.rectangle,
-                borderRadius: const BorderRadius.all(Radius.circular(35)),
-                border: Border.all(width: 1.5, color: Colors.white),
-                gradient: const LinearGradient(colors: [
-                  Color(0xff942EB4),
-                  Color(0xff615BD0),
-                  Color(0xff3287EA)
-                ]),
+          body: Container(
+            height: double.maxFinite,
+            width: double.maxFinite,
 
-              ),
-              child: const Text(
-                "Flutter",
-                style: TextStyle(
-                    color: Colors.white,
-                    fontSize: 25,
+            decoration: BoxDecoration(
+              gradient: LinearGradient(
+                    begin: Alignment.topCenter,
+                colors: [
 
-                    fontWeight: FontWeight.w500),
+                  Color(0xff2196F3),
+                  Color(0xff3C59BC)
+                ]
+              )
+            ),
+            child: Center(
+              child: Container(
+                height: 140,
+                width: 250,
+                alignment: Alignment.center,
+                decoration:  BoxDecoration(
+                  color: Colors.white,
+                  shape: BoxShape.rectangle,
+
+                  border: Border.all(width: 1.5, color: Colors.white),
+                  gradient: const LinearGradient(
+                      begin: Alignment.topCenter,
+                      end: Alignment.bottomCenter,
+                      colors: [
+                    Color(0xffFF5722),
+                        Color(0xffFF5722),
+                    Colors.white,
+
+                    Color(0xff388E3C),
+                        Color(0xff388E3C)
+                  ]),
+
+                ),
+                child: const Text(
+                  "✴",
+                  style: TextStyle(
+                      color: Color(0xff00008B),
+                      fontSize: 55,
+
+                      fontWeight: FontWeight.w500),
+                ),
               ),
             ),
           ),
