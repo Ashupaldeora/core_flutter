@@ -21,54 +21,78 @@ class MyApp extends StatelessWidget {
           appBar: AppBar(
             backgroundColor: const Color(0xffBBBBBB),
           ),
-          body: Center(
-            child: Container(
-              height: 300,
-              width: 300,
-              alignment: Alignment.center,
-              decoration: const BoxDecoration(
-                  color: Color(0xffFF9800), shape: BoxShape.circle),
-              child: Stack(
-                children: [
-                  Positioned(
-                    top: 90,
-                    left: 55,
-                    child: Container(
-                      height: 80,
-                      width: 80,
-                      decoration: const BoxDecoration(
-                          color: Colors.white, shape: BoxShape.circle),
-                    ),
+          body:Stack(children: [
+          Center(
+
+              child: Container(
+                height: 300,
+                width: 300,
+                alignment: Alignment(0,-5),
+                decoration: BoxDecoration(
+                  color: Colors.white,
+                  shape: BoxShape.circle,
+                  border: Border.all(width: 35,color: Colors.orange)
+                ),
+
+                child: Stack(children: [
+                  Container(
+                  height: 222,
+                  width: 225,
+                  alignment: Alignment(-0.7,-0.2),
+
+                  decoration: BoxDecoration(
+
+                    color: Colors.orange,
+                    shape: BoxShape.circle,
+
                   ),
-                  Positioned(
-                    top: 90,
-                    left: 165,
-                    child: Container(
-                      height: 80,
-                      width: 80,
-                      decoration: const BoxDecoration(
-                          color: Colors.white, shape: BoxShape.circle),
-                    ),
-                  ),
-                  Positioned(
-                      top: 200,
-                    left: 150,
-                    child: Container(
-                    height: 80,
+                  child: Container(
                     width: 80,
-
-                    decoration: const BoxDecoration(
-                        color: Colors.white,
-                      borderRadius: BorderRadius.only(bottomLeft: Radius.circular(100))
-
+                    height: 80,
+                     // alignment: Alignment(2,1),
+                    decoration: BoxDecoration(
+                      color: Colors.white,
+                      shape: BoxShape.circle
                     ),
-                  ))
-                ],
+
+
+                  ),
+
+                ),
+                   Positioned(top: 55,
+                       left: 125,
+                       child: Container(
+                      height: 80,
+                      width: 80,
+                      decoration: BoxDecoration(
+                        color: Colors.white,
+                        shape: BoxShape.circle
+                      ),
+                    )),
+
+                ]),
+
               ),
-            ),
+
+
           ),
+      Positioned(top: 710,
+          child: Container(
+        height: 80,
+        width: 420,
+        decoration: BoxDecoration(
+          color: Colors.orange,
+          shape: BoxShape.rectangle
         ),
-      ),
+            child: Center(child:Text("Emoji",style: TextStyle(color: Colors.white,fontWeight: FontWeight.w400,fontSize: 30),),)
+
+      ))
+    ]),
+
+        ),),
     );
+
+
+
   }
 }
