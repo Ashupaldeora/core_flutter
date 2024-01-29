@@ -26,7 +26,7 @@ class MyApp extends StatelessWidget {
             title: const Text(
               "Watch",
               style:
-              TextStyle(color: Colors.white, fontWeight: FontWeight.w500),
+                  TextStyle(color: Colors.white, fontWeight: FontWeight.w500),
             ),
             centerTitle: false,
           ),
@@ -37,39 +37,29 @@ class MyApp extends StatelessWidget {
                 gradient: LinearGradient(
                     begin: Alignment.topCenter,
                     end: Alignment.bottomCenter,
-                    colors: [
-                      Color(0xff48416A),
-                      Color(0xff2294EF)
-                    ]
-                )
-            ),
+                    colors: [Color(0xff48416A), Color(0xff2294EF)])),
             child: Center(
               child: Container(
                 height: 80,
                 width: 220,
                 alignment: Alignment.center,
-                decoration:  BoxDecoration(
+                decoration: BoxDecoration(
                     color: Colors.white.withOpacity(0.15),
                     shape: BoxShape.rectangle,
                     borderRadius: const BorderRadius.all(Radius.circular(35)),
                     border: Border.all(width: 0.05, color: Colors.white),
-                    boxShadow:[ BoxShadow(
-                        color: Colors.black.withOpacity(0.09),
-
-                        blurRadius: 7,
-                        offset: Offset(4,5),
-                        spreadRadius: 3
-
-                    )
-
-
-                    ] ),
+                    boxShadow: [
+                      BoxShadow(
+                          color: Colors.black.withOpacity(0.09),
+                          blurRadius: 7,
+                          offset: Offset(4, 5),
+                          spreadRadius: 3)
+                    ]),
                 child: const Text(
                   "Flutter",
                   style: TextStyle(
                       color: Colors.white,
                       fontSize: 25,
-
                       fontWeight: FontWeight.w500),
                 ),
               ),

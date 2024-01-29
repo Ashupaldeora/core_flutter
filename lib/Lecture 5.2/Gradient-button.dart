@@ -35,7 +35,7 @@ class MyApp extends StatelessWidget {
               height: 80,
               width: 250,
               alignment: Alignment.center,
-              decoration:  BoxDecoration(
+              decoration: BoxDecoration(
                 color: Colors.white,
                 shape: BoxShape.rectangle,
                 borderRadius: const BorderRadius.all(Radius.circular(35)),
@@ -45,14 +45,12 @@ class MyApp extends StatelessWidget {
                   Color(0xff615BD0),
                   Color(0xff3287EA)
                 ]),
-
               ),
               child: const Text(
                 "Flutter",
                 style: TextStyle(
                     color: Colors.white,
                     fontSize: 25,
-
                     fontWeight: FontWeight.w500),
               ),
             ),

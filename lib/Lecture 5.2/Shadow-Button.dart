@@ -24,7 +24,7 @@ class MyApp extends StatelessWidget {
             title: const Text(
               "Dark Shadow Button",
               style:
-              TextStyle(color: Colors.white, fontWeight: FontWeight.w500),
+                  TextStyle(color: Colors.white, fontWeight: FontWeight.w500),
             ),
             centerTitle: true,
           ),
@@ -46,12 +46,11 @@ class MyApp extends StatelessWidget {
                       spreadRadius: 3,
                     ),
                     BoxShadow(
-                      color: Color(0xff009688),
-                      blurStyle: BlurStyle.normal,
-                      blurRadius: 15,
-                      spreadRadius: 5,
-                      offset: Offset(0, 5)
-                    ),
+                        color: Color(0xff009688),
+                        blurStyle: BlurStyle.normal,
+                        blurRadius: 15,
+                        spreadRadius: 5,
+                        offset: Offset(0, 5)),
                   ]),
               child: const Text(
                 "Tap",
