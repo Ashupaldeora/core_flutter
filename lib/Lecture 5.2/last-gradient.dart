@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
+
 void main() {
   SystemChrome.setSystemUIOverlayStyle(const SystemUiOverlayStyle(
-    statusBarColor: Color(0xff312D48),
+    statusBarColor: Colors.pink,
   ));
   runApp(const MyApp());
 }
@@ -18,60 +19,62 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       home: SafeArea(
         child: Scaffold(
-          backgroundColor: const Color(0xff48416A),
+          backgroundColor: Colors.white,
           appBar: AppBar(
-            backgroundColor: const Color(0xff48416A),
-            elevation: 7,
+
+            backgroundColor: Colors.pink,
+            elevation: 0,
             shadowColor: Colors.black,
             title: const Text(
-              "Watch",
+              "Gradient",
               style:
               TextStyle(color: Colors.white, fontWeight: FontWeight.w500),
             ),
-            centerTitle: false,
+            centerTitle: true,
           ),
-          body: Container(
-            height: double.maxFinite,
-            width: double.maxFinite,
-            decoration: BoxDecoration(
-                gradient: LinearGradient(
-                    begin: Alignment.topCenter,
-                    end: Alignment.bottomCenter,
-                    colors: [
-                      Color(0xff48416A),
-                      Color(0xff2294EF)
-                    ]
-                )
-            ),
-            child: Center(
-              child: Container(
-                height: 80,
-                width: 250,
-                alignment: Alignment.center,
-                decoration:  BoxDecoration(
-                    color: Colors.white.withOpacity(0.1),
-                    shape: BoxShape.rectangle,
-                    borderRadius: const BorderRadius.all(Radius.circular(35)),
-                    border: Border.all(width: 0.7, color: Colors.white),
-                    boxShadow:[ BoxShadow(
-                        color: Colors.grey,
-                        blurStyle: BlurStyle.normal,
-                        blurRadius: 10,
-                        offset: Offset(3,5),
-                        spreadRadius: 1
+          body: Center(
+            child: Container(
+              height: 70,
+              width: 220,
+              alignment: Alignment.center,
 
-                    )
+              decoration:  BoxDecoration(
+                  color: Colors.white.withOpacity(1),
+                  shape: BoxShape.rectangle,
+                  borderRadius: const BorderRadius.all(Radius.circular(35)),
+                     gradient: const LinearGradient(
+
+                       begin: Alignment(0,-3),
+
+                       colors: [
+                         Color(0xffCD5099),
+                         Color(0xffF93F7E),
+                         Color(0xffF93F7E),
+
+                         Color(0xffFF5669)
 
 
-                    ] ),
-                child: const Text(
-                  "Flutter",
-                  style: TextStyle(
-                      color: Colors.white,
-                      fontSize: 25,
+                       ]
+                     ),
+                  boxShadow:[ BoxShadow(
 
-                      fontWeight: FontWeight.w500),
-                ),
+                      color: Colors.pinkAccent.withOpacity(0.7),
+                      blurStyle: BlurStyle.normal,
+                      blurRadius: 25,
+                      offset: const Offset(0,15),
+                      spreadRadius: 0
+
+                  )
+
+
+                  ] ),
+              child: const Text(
+                "Call to action",
+                style: TextStyle(
+                    color: Colors.white,
+                    fontSize: 20,
+                      letterSpacing: 1,
+                    fontWeight: FontWeight.w500),
               ),
             ),
           ),
