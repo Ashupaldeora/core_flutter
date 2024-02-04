@@ -59,7 +59,7 @@ class _appState extends State<app> {
                 ),
               ),
               Container(
-                height: 250,
+                height: 200,
                 margin: EdgeInsets.only(top: 50),
                 decoration: BoxDecoration(color: Colors.transparent),
                 child: Row(
@@ -157,6 +157,30 @@ class _appState extends State<app> {
                     )
                   ],
                 ),
+              ),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  InkWell(
+                    onTap: () {
+                      setState(() {
+                        count = 0;
+                      });
+                    },
+                    child: Container(
+                      height: 60,
+                      width: 150,
+                      alignment: Alignment.center,
+                      decoration: BoxDecoration(
+                          color: Color(0xff54759E),
+                          borderRadius: BorderRadius.circular(10)),
+                      child: Text(
+                        "Clear",
+                        style: TextStyle(color: Colors.white, fontSize: 35),
+                      ),
+                    ),
+                  ),
+                ],
               )
             ],
           ),
