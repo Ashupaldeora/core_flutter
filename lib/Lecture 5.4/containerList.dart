@@ -272,3 +272,23 @@ List iconlist = [
 ];
 
 List dynamic = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+
+List colors = [
+  Colors.yellowAccent,
+  Colors.pink,
+  Colors.orange,
+  Colors.black,
+  Colors.blue,
+  Colors.grey,
+  Colors.green,
+  Colors.purple,
+];
+
+List iconeditor = [
+  Icons.add,
+  Icons.adjust,
+  Icons.u_turn_left,
+  Icons.image,
+  Icons.arrow_back_ios,
+  Icons.arrow_forward_ios
+];
